@@ -18,7 +18,7 @@ class ContactInfo{
        return new ContactInfo(typeofcontactinfo,valueofcontactinfo)
      }
 
-     updateTypeofContactInfo(parameter,newcontent){
+     #updateTypeofContactInfo(parameter,newcontent){
         if(typeof parameter != 'string'){
             throw new Error('Enter valid parameter')
         }
@@ -27,12 +27,25 @@ class ContactInfo{
         }
         this.typeofcontactinfo=newcontent
     }
-    updateValueofContactInfo(parameter,newcontent){
+    #updateValueofContactInfo(parameter,newcontent){
         if(typeof parameter != 'string'){
             throw new Error('Enter valid parameter')
         }
         this.valueofcontactinfo=newcontent
 
+    }
+
+    updateContactinfobyid(parameter,newcontent){
+        switch(parameter){
+            case 'typeofcontactinfo':
+               this.#updateTypeofContactInfo(parameter,newcontent)
+                break
+            case 'valueofcontactinfo':
+                this.#updateValueofContactInfo(parameter,newcontent)
+                break
+            default:
+                throw new Error('No such parameter')
+        }
     }
 }
 

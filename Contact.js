@@ -66,18 +66,7 @@ class Contact{
             if(FoundContactinfo ==  null){
                 throw new Error('Contact info id not found')
             }
-        switch(parameter){
-            case 'typeofcontactinfo':
-                FoundContactinfo.updateTypeofContactInfo(parameter,newcontent)
-                break
-            case 'valueofcontactinfo':
-                FoundContactinfo.updateValueofContactInfo(parameter,newcontent)
-                break
-            default:
-                throw new Error('No such parameter')
-        }
-
-
+            FoundContactinfo.updateContactinfobyid(parameter,newcontent)
     }
 
     deleteContactinfobyid(contactinfoid){
