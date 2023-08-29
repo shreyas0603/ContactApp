@@ -1,11 +1,11 @@
 const User = require("./User");
 
-// let g1= User.newAdmin('',23,'M')
+let g1= User.newAdmin('',23,'M')
 // let g2= User.newAdmin('',23,'M')
 // console.log(g1);
 // console.log(g2);
-// let user= g1.newUser("Shreyas",56,'M')
-// console.log(user);
+let user1= g1.newUser("Shreyas",56,'M')
+// console.log(user1);
 
 
 // g1.newUser("Shreyas",24,'M')
@@ -20,10 +20,8 @@ const User = require("./User");
 //  console.log(g1.getAllUser())
 
  
+//user functionality
 
-let user1= new User()
- 
- 
  user1.createContact('Rohan')
  user1.createContact('Akshay')
  console.log(user1.getAllContact())
